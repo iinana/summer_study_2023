@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="livingCon">살고 있는 지역은?</label>
+    <!-- multiple 추가하면 ctrl 키 누르면 여러개 선택 가능 (잘 사용 안함) -->
+    <select name="" id="livingCon" multiple>
+      <option value="02">서울</option>
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+    </select>
+
+    <br />
+    <p>성별 고르기 (with 2 types)</p>
+    <select name="" id="">
+      <option value="male">남자</option>
+      <option value="female">여자</option>
+    </select>
+    <div>
+      <input type="radio" name="rdo_sex" id="male" />
+      <label for="male">남자</label>
+      <input type="radio" name="rdo_sex" id="female" />
+      <label for="female">여자</label>
+    </div>
+
+    <br />
+    <div>
+      <textarea name="" id="" cols="30" rows="10">
+여러줄을 입력하기 위한 공간</textarea
+      >
+    </div>
+
+    <br />
+    <div>
+      <fieldset>
+        <legend>개인정보</legend>
+        <div>
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="tel">연락처</label>
+          <input type="tel" id="tel" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>학력정보</legend>
+        <div>
+          <label for="school">졸업학교</label>
+          <input type="text" id="school" />
+          <label for="graduate">졸업년도</label>
+          <input type="text" id="graduate" />
+        </div>
+      </fieldset>
+    </div>
+
+    <br />
+    <div>
+      <!--작성한 datalist에서 select/autocomplete하거나 자체 작성도 가능한 input -->
+      <label for="borowsers1">첫번째 브라우저 입력</label>
+      <input list="browsers" />
+      <datalist id="browsers">
+        <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Chrome">Chrome</option>
+        <option value="Opera">Opera</option>
+        <option value="Safari">Safari</option>
+      </datalist>
+    </div>
+    <div>
+      <label for="browsers2"
+        >두번째 브라우저 입력 (다시 datalsit 설정하지 않고 사용 가능)</label
+      >
+      <input list="browsers" id="browsers2" />
+    </div>
+  </body>
+</html>

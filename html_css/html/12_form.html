@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- action: 데이터를 전송할 주소 (서버 주소) -->
+    <!-- method: 데이터를 전송할 방법
+        (1) get: 전송하는 데이터가 url에 노출 (보안에 취약 가능, 페이지 주소 공유해야할 때)
+        (2) post: 전송하는 데이터가 url에 노출되지 않음 (사용자 눈에 보이지 않기 때문에 보안 조금 더 낫지만 개발자 도구로 확인 가능)-->
+    <!-- target: 데이터를 전송할 창 선택
+        (1) _self: 자기 자신의 창 (default)
+        (2) _blank: 새창(새탭)
+        (3) _parent, top  -->
+
+    <form action="/info" method="get" target="_self" nonvalidate>
+      <!-- nonvalidate: form 태그 안의 input 요소의 정확성을 체크하지 않는다. -->
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" autocomplete="on" />
+      </div>
+      <div>
+        <label for="tel">연락처</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <button type="submit">저장</button>
+      <!-- <button type="submit" formnovalidate="formnovalidate">저장</button> 
+            - formnovalidate 사용으로 형식 맞는지 체크 안하도록 설정-->
+    </form>
+  </body>
+</html>

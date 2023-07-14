@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="" id="" value="ABC" />
+      </div>
+
+      <div>
+        <!-- readonly: 수정 불가, 하지만 submit할 때 value 전송 가능 -->
+        <input type="text" value="ABC" readonly />
+      </div>
+
+      <div>
+        <!-- disabled: 수정 불가, submit할 때 value 전송 불가 v -->
+        <input type="text" value="ABC" disabled />
+      </div>
+
+      <button type="submit">저장</button>
+    </form>
+
+    <br />
+    <div>
+      <input type="text" maxlength="4" />
+    </div>
+
+    <br />
+    <div>
+      <input type="tel" name="" id="" placeholder="하이픈(-)없이 숫자만 입력" />
+    </div>
+
+    <br />
+    <form action="">
+      <div>
+        <label for="userid">아이디</label>
+        <input type="text" id="userid" placeholder="필수입력" required />
+
+        <label for="age">나이</label>
+        <input type="number" id="age" placeholder="선택입력" />
+
+        <button type="submit">저장</button>
+      </div>
+    </form>
+
+    <br />
+    <div>
+      <!-- autocomplete: 같은 name group에 입력했던 value 자동 완성 (사이트 무관) -->
+      <!-- autocomplete를 위한 표준 name 값
+            1. name: 이름
+            2. email: 이메일 주소
+            3. username: 사용자 계정
+            4. new-password: 새로운 비밀번호
+            5. current-password: 사용자의 현재 비밀번호
+            6. one-time-code: 사용자를 인증할 때 사용하는 1회성 코드 -->
+      <input type="text" name="email" autocomplete="on" />
+    </div>
+
+    <br />
+    <form action="">
+      <label for="userId">아이디</label>
+      <input
+        type="text"
+        name="username"
+        id="userId"
+        autocomplete="on"
+        autofocus="on"
+        required
+      />
+      <label for="userpsw">비밀번호</label>
+      <input type="text" name="userpassword" id="userpsw" required />
+    </form>
+  </body>
+</html>

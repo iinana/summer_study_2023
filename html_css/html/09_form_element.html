@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form 요소 -->
+    <!-- 사용자로부터 데이터(정보)를 입력받기 위한 HTML 요소들 -->
+    <form action="/server/login">
+      <div>
+        <label for="email">email</label>
+        <input type="email" id="email" />
+      </div>
+      <div>
+        <label for="pw">password</label>
+        <input type="password" id="pw" />
+      </div>
+      <div>
+        <button>login</button>
+      </div>
+    </form>
+
+    <br />
+    <h4>당신이 배우고 싶은 언어는? (다중 선택 가능)</h4>
+    <div>
+      <!-- input&label을 id&for로 연결해주지 않으면 text 클릭 시 checkbox 반영 불가 -->
+      <input type="checkbox" name="chk_lang" id="chk_html" />
+      <label for="chk_html">HTML</label>
+      <input type="checkbox" name="chk_lang" id="chk_css" />
+      <label for="chk_css">CSS</label>
+      <input type="checkbox" name="chk_lang" id="chk_java" />
+      <label for="chk_java">JAVA</label>
+    </div>
+
+    <br />
+    <h4>당신이 배우고 싶은 언어는? (하나만 선택 가능)</h4>
+    <div>
+      <input type="radio" name="rdo_lang" id="rdo_html" />
+      <label for="rdo_html">HTML</label>
+      <input type="radio" name="rdo_lang" id="rdo_css" />
+      <label for="rdo_html">CSS</label>
+      <input type="radio" name="rdo_lang" id="rdo_java" />
+      <label for="rdo_html">JAVA</label>
+    </div>
+
+    <br />
+    <div>
+      <label for="favoriteColor">가장 좋아하는 색상은?</label>
+      <input type="color" id="favoriteColor" value="color" />
+    </div>
+
+    <br />
+    <div>
+      <label for="birth">태어난 날짜는?</label>
+      <input type="date" id="birth" />
+    </div>
+
+    <br />
+    <div>
+      <label for="date_time">입국한 날짜 및 시간은?</label>
+      <input type="datetime-local" name="date_time" id="date_time" />
+    </div>
+
+    <br />
+    <div>
+      <form action="">
+        <!-- form tag 안에 있으면 type에 맞는 형태 확인 가능 -->
+        <label for="user_email">이메일 주소는?</label>
+        <input type="email" id="user_email" />
+        <!-- submit type은 input을 action된 주소로 submit -->
+        <button type="submit">저장</button>
+      </form>
+    </div>
+
+    <br />
+    <div>
+      <label for="file">파일</label>
+      <input type="file" id="file" />
+    </div>
+
+    <br />
+    <div>
+      <!-- 사용자의 입력을 받기 위한 용도가 아니고, 대부분 개발자가 입력하기 위해 쓰는 태그 -->
+      <input type="hidden" name="user_id" value="innna" />
+    </div>
+
+    <br />
+    <div>
+      <!-- just 이미지 -->
+      <img src="./img/logo.jpg" alt="" style="width: 100px; height: auto" />
+      <!-- 버튼이나 링크의 역학을 하는 이미지 -->
+      <input
+        type="image"
+        src="./img/logo.jpg"
+        style="width: 100px; height: auto"
+      />
+    </div>
+
+    <br />
+    <div>
+      <label for="yearmonth">생년/년월</label>
+      <input type="month" id="yearmonth" />
+    </div>
+
+    <br />
+    <div>
+      <label for="age">당신의 나이는?</label>
+      <input type="number" min="0" max="100" />
+    </div>
+
+    <br />
+    <div>
+      <form action="">
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" pattern="^010-\d{4}-\d{4}$" />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+
+    <br />
+    <div>
+      <label for="general">일반문자</label>
+      <input type="text" id="general" />
+    </div>
+
+    <br />
+    <div>
+      <label for="visitTime">예약시간</label>
+      <input type="time" id="visitTime" />
+    </div>
+
+    <br />
+    <div>
+      <form action="">
+        <label for="blog">블로그 주소는?</label>
+        <input type="url" />
+        <button type="submit"></button>
+      </form>
+    </div>
+
+    <br />
+    <div>
+      <label for="weekPlan">주간 계획 (몇주차)</label>
+      <input type="week" id="weekPlan" />
+    </div>
+
+    <br />
+    <div>
+      <label for="searchKeyword">검색</label>
+      <input type="search" id="searchKeyword" />
+    </div>
+  </body>
+</html>
