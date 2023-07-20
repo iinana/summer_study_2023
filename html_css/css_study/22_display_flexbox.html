@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex; /* 최상위(container)에 flex 설정 */
+
+        /* 주축 설정 */
+        /* flex-direction: row; /* x축, 좌에서 우로 */
+        /* flex-direction: row-reverse /* x축, 우에서 좌로 */
+        /* flex-direction: column /* y축, 위에서 아래로 */
+        flex-direction: column-reverse; /* y축, 아래서 위로 */
+
+        border: 3px dotted black;
+      }
+
+      .item {
+        background-color: greenyellow;
+        width: 150px;
+        text-align: center;
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </body>
+</html>

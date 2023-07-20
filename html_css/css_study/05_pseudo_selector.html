@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+
+      /* 가상 클래스 선택자
+            ex1. 마우스가 올라가면(hover) 이렇게 바꾸겠다. */
+      a:hover {
+        color: white;
+        background-color: blue;
+      }
+      button:hover {
+        color: white;
+        background-color: red;
+      }
+
+      /*    ex2. 방문한 적이 없는 링크 */
+      a:link {
+        color: blue;
+      }
+
+      /*    ex3. 방문한 적이 있는 링크 */
+      a:visited {
+        color: green;
+      }
+
+      /*    ex4. 마우스가 포커스 됐을 때 */
+      input:focus {
+        border: 5px solid red;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      table {
+        width: 100%;
+      }
+
+      /*    ex5. table의 짝수행에만
+            - 2n or even : 짝수행
+            - 2n+1 or odd : 홀수행 */
+      tbody > tr:nth-child(even) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://naver.com">네이버</a>
+    <a href="https://google.com">구글</a>
+
+    <br />
+    <button>조회</button>
+
+    <br />
+    <input type="text" />
+
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-0000-0000</td>
+          <td>you@gmail.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>010-0000-0001</td>
+          <td>kim@gmail.com</td>
+        </tr>
+        <tr>
+          <td>양세찬</td>
+          <td>010-0000-0002</td>
+          <td>yang@gmail.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>010-0000-0003</td>
+          <td>song@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

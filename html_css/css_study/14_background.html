@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 배경색 */
+      div {
+        background-color: aqua;
+      }
+
+      /* 배경 이미지 */
+      /* background-repeat
+        - repeat-x  : 가로로 반복
+        - repeat-y  : 세로로 반복
+        - no-repeat : 반복하지 않음
+        - (default) : 가로/세로로 모두 반복 */
+      /* background-position
+        - 첫번째가 x축 두번째가 y축 의미
+        - x축: left, center, right
+        - y축: top, center, bottom
+        - x축, y축 뒤에 px값을 적으면 그만큼 해당 위치로 부터 띄어줌 */
+      /* background-attachment: contents가 스크롤 될 때 이미지 고정 여부 (fixed, scroll) */
+      /* background로 한번에 설정
+        - color, image, repeat, position */
+      body {
+        /* background-repeat: no-repeat;
+        background-position: center 50px, center; */
+        background-attachment: scroll;
+
+        background: yellowgreen url("./img/gradation.jpg") no-repeat right 20px
+          top 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>배경색</div>
+    <br />
+
+    <!-- backgrount-attachment 확인용 -->
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+    <p>문장</p>
+  </body>
+</html>

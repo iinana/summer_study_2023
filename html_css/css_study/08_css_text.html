@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 기본적인 텍스트 관련 스타일링 */
+      /* (1) 텍스트 정렬 */
+      .text-center {
+        text-align: center;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .text-left {
+        text-align: left;
+      }
+
+      /* (2) 텍스트 색상 */
+      .text-blue {
+        color: blue;
+      }
+
+      /* (3) 텍스트 장식선 */
+      .underline {
+        text-decoration: underline;
+      }
+      .overline {
+        text-decoration: overline;
+      }
+      .delline {
+        text-decoration: line-through;
+      }
+      .plain {
+        text-decoration: none;
+      }
+
+      /* text decoration (4가지 하위 propertiex)
+        (1) text-decoration-style: 장식선 스타일 (직선, 점선 등)
+        (2) text-decoration-line: 장식 종류 (밑줄, 윗줄, 가운데줄 등)
+        (3) text-decoration-color: 장식선 색상
+        (4) text-decoration-thickness: 장식선 두께 */
+      /* 방법1: 한번에 정의 */
+      .underover {
+        text-decoration: dashed underline overline;
+      }
+      /* 방법2: 각각 정의 */
+      .undermid {
+        text-decoration-line: underline line-through;
+        text-decoration-style: dashed;
+      }
+
+      /* (4) 텍스트 변환 */
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .lowercase {
+        text-transform: lowercase;
+      }
+      .capitalize {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 기본적인 텍스트 관련 스타일링 -->
+    <!-- (1) 텍스트 정렬 -->
+    <h1 class="text-center">가운데 정렬</h1>
+    <h1 class="text-right">오른쪽 정렬</h1>
+    <br />
+
+    <!-- (2) 텍스트 색상 -->
+    <h1 class="text-blue">파란색 텍스트</h1>
+    <br />
+
+    <!-- (3) 텍스트 장식선 -->
+    <p class="underline">밑줄을 가진 텍스트</p>
+    <p class="overline">윗줄을 가진 텍스트</p>
+    <p class="delline">취소선을 가진 텍스트</p>
+    <a href="" class="plain"
+      >링크인 a태그의 기본값인 underline을 없앤 텍스트입니다.</a
+    >
+    <p class="underover">윗줄과 밑줄 글씨입니다.</p>
+    <p class="undermid">아랫줄과 취소선 글씨입니다.</p>
+    <br />
+
+    <!--(4) 텍스트 변환 -->
+    <p class="uppercase">change the text as uppercase</p>
+    <p class="lowercase">CHANGE THE TEXT AS LOWERCASE</p>
+    <p class="capitalize">change the first letter to uppercase</p>
+    <!-- (사용예시) 사용자에게 입력을 대문자로만 받아야하는 경우
+        - 하지만 보이는 것만 대문자로 변환될 뿐 저장되는 데이터는 여전히 소문자라는 점 주의 -->
+    <input type="text" class="uppercase" />
+  </body>
+</html>

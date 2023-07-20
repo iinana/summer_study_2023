@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sizing {
+        width: 300px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: 10px solid green;
+      }
+      .box-cb {
+        box-sizing: content-box;
+      }
+      .box-bb {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. padding
+        - padding-top, padding-right, padding-bottom, padding-left
+        - ex. padding 10px 5px 8px 7px (= top 10px, right 5px, bottom 8px, left 7px)
+        - ex. padding 10px (= top, right, bottom, left 모두 10px)
+        - ex. padding 10px 5px (= top/bottom 10px, right/left 5px)
+        - ex. padding 10px 5px 8px (= top 10px, right/left 5px, bottom 8px)-->
+    <!-- border과 margin도 똑같음
+        - border-top, border-right, border-bottom, border-left
+        - margin-top, margin-right, margin-bottom, margin-left -->
+    <div style="padding: 10px; border: 10px solid green">
+      <div style="border: 5px solid red">CSS 박스 모델</div>
+      <div style="padding: 5px; border: 5px solid red">
+        CSS 박스 모델 (padding 적용)
+      </div>
+    </div>
+    <br />
+
+    <!-- 2. box sizing -->
+    <div class="sizing">CSS 박스 모델</div>
+    <!-- (1) content box: width, height 설정하면 content 부분 설정 -->
+    <div class="sizing box-cb">CSS 박스 모델: content box</div>
+    <!-- (2) border box: width, height 설정하면 border 부분까지 포함한 것을 설정 -->
+    <div class="sizing box-bb">CSS 박스 모델: border box</div>
+    <br />
+
+    <!-- max/min width: width를 백분율로 지정할 때 창이 커지고 작아짐에 따라 해당 요소도 변화하는데, 
+        max/min을 설정해두면 해당값 위로/아래로 요소가 변화하지 않음 -->
+    <div style="width: 100%; height: 200px; background-color: green">
+      <div
+        style="width: 50%; max-width: 900px; height: 50%; background-color: red"
+      ></div>
+    </div>
+  </body>
+</html>

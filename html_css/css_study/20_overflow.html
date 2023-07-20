@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* p태그는 기본적으로 부모요소 box를 벗어나지 않도록 설정됨
+        -> 벗어나도록 설정하여 overflow 설정 test (p태그를 무조건 한 행에 쓰겠다) */
+      p {
+        white-space: nowrap;
+      }
+
+      div {
+        height: 200px;
+        width: 250px;
+        border: 3px solid green;
+        /* overflow-x: scroll;
+        overflow-y: scroll; */
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- overflow
+        - html의 자식 요소가 부모 요소보다 content 크기가 더 클 경우 자식 요소를 어떻게 보여줄지 결정
+        - overflow-x, overflow-y -->
+    <div>
+      <p>
+        자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남 자식요소 - 너무
+        많으면 어느 순간 부모 요소 box를 벗어남
+      </p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+    </div>
+    <br />
+
+    <!-- overflow:scroll로 하면 content가 overflow하지 않아도 스크롤바가 생성 -->
+    <h3>overflow:scroll & not overflow</h3>
+    <div>
+      <p>자식요소</p>
+      <p>자식요소</p>
+      <p>자식요소</p>
+    </div>
+    <br />
+
+    <!-- overflow:auto로 하면 overflow하는 경우에만 스크롤바 생성 -->
+    <h3>overflow:auto & overflow</h3>
+    <div style="overflow: auto">
+      <p>
+        자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남 자식요소 - 너무
+        많으면 어느 순간 부모 요소 box를 벗어남
+      </p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+      <p>자식요소 - 너무 많으면 어느 순간 부모 요소 box를 벗어남</p>
+    </div>
+    <br />
+    <h3>overflow:auto & not overflow</h3>
+    <div style="overflow: auto">
+      <p>자식요소</p>
+      <p>자식요소</p>
+      <p>자식요소</p>
+    </div>
+  </body>
+</html>

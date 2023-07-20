@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* border: border-width border-style border-color */
+      /* border-top, border-right, border-bottom, border-left
+        - border: 5px (= top, right, bottom, left 모두 5px)
+        - border: 5px 10px (= top/bottom은 5px, right/left는 10px)
+        - border: 5px 10px 7px (= top은 5px, right/left는 10px, bottom은 7px)
+        - border: 5px 10px 7px 8px (= top은 5px, right는 10px, bottom은 7px, left는 8px) */
+      div {
+        /* border: 3px solid red; */
+        border-width: 3px;
+        border-color: red;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+      }
+
+      /* border style */
+      .dashed {
+        border-style: dashed;
+      }
+      .dotted {
+        border-style: dotted;
+      }
+      .solid {
+        border-style: solid;
+      }
+      .double {
+        border-style: double;
+      }
+      .groove {
+        border-style: groove;
+      }
+      .ridge {
+        border-style: ridge;
+      }
+      .inset {
+        border-style: inset;
+      }
+      .outset {
+        border-style: outset;
+      }
+
+      /* border width (두께) */
+      .thin {
+        border-width: thin;
+      }
+      .medium {
+        border-width: medium;
+      }
+      .thick {
+        border-width: thick;
+      }
+
+      /* border-radius (모서리가 둥근 정도, 반지름으로 설정) */
+      .radius {
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashed"></div>
+    <div class="dotted"></div>
+    <div class="solid"></div>
+    <div class="double"></div>
+    <div class="groove"></div>
+    <div class="ridge"></div>
+    <div class="inset"></div>
+    <div class="outset"></div>
+    <br />
+
+    <div class="solid thick"></div>
+    <div class="dashed thin"></div>
+    <br />
+
+    <div class="solid radius"></div>
+  </body>
+</html>

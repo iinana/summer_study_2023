@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        /* a태그에서 페이지 내부의 요소로 이동하도록 했을 때 스크롤 설정 */
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .header {
+        padding: 60px;
+        background-color: #f9fc63;
+        color: black;
+        text-align: center;
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: #333;
+
+        display: flex;
+        /* flex-direction: row; (default) */
+        justify-content: center;
+      }
+
+      nav a:hover {
+        background-color: #f9fc63;
+      }
+
+      nav > a {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .contain-left {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      .contain-right {
+        width: 70%;
+        padding: 20px;
+      }
+
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .project > .date {
+        font-size: medium;
+        font-weight: 500;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #ddd;
+      }
+
+      /* 반응형 웹 적용
+        - 768px 보다 작으면 아래 조건 적용 */
+      @media screen and (max-width: 768px) {
+        .container,
+        nav {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Who Am I</h1>
+    </header>
+    <nav class="navbar">
+      <a href="">메뉴1</a>
+      <a href="">메뉴2</a>
+      <a href="">메뉴3</a>
+      <a href="">메뉴4</a>
+      <a href="#project5">메뉴5</a>
+    </nav>
+
+    <div class="container">
+      <aside class="contain-left">
+        <div class="about">
+          <h2>About</h2>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            저는 22년차 소프트웨어 개발자입니다. 유튜브 개발자의 품격 채널을
+            운영중입니다.
+          </p>
+        </div>
+        <br />
+        <div class="skills">
+          <h3>Skills</h3>
+          <p>Javascript, Vue, React, Angular, Java, SAP, RDBMS, No-SQL...</p>
+          <p class="fakeimg" style="height: 60px">image</p>
+          <p class="fakeimg" style="height: 60px">image</p>
+        </div>
+      </aside>
+      <main class="contain-right">
+        <section>
+          <h2>프로젝트1</h2>
+          <p class="date">2021년 2월</p>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트2</h2>
+          <p class="date">2021년 2월</p>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트3</h2>
+          <p class="date">2021년 2월</p>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트4</h2>
+          <p class="date">2021년 2월</p>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section id="project5">
+          <h2>프로젝트5</h2>
+          <p class="date">2021년 2월</p>
+          <div class="fakeimg" style="height: 200px">image</div>
+          <p>
+            이 프로젝트는 어떤 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+      </main>
+    </div>
+    <div class="footer">
+      <h2>Copyright 개발자의품격 2022</h2>
+    </div>
+  </body>
+</html>

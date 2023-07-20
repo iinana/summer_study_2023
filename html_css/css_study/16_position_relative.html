@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .non-relative {
+        border: 3px solid black;
+      }
+
+      .relative-left {
+        position: relative;
+        left: 30px;
+        border: 3px solid red;
+      }
+      .relative-top {
+        position: relative;
+        top: 80px;
+        border: 3px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position: html 요소의 위치를 정의
+        - static, relative, abolute, fixed, sticky -->
+
+    <!-- (1) static(default): 일반적인 문서의 흐름에 따라서 요소의 위치가 정해짐 -->
+    <h2 style="position: static"></h2>
+    <br />
+
+    <!-- (2) relative: 일반적인 문서의 흐름에 따라서 요소의 위치가 정해지고, 
+                       top/right/bottom/left의 4가지 속성을 같이 사용하여 오프셋을 적용 -->
+    <h2>position:relative</h2>
+
+    <div class="non-relative">
+      relative를 적용하지 않은 경우 (오프셋되지 않음)
+    </div>
+    <div class="relative-left">
+      원래 자신이 있어야 하는 위치에서 left:30px만큼 오프셋됩니다.
+    </div>
+    <div class="relative-top">
+      원래 자신이 있어야 하는 위치에서 top:80px만큼 오프셋됩니다.
+    </div>
+  </body>
+</html>

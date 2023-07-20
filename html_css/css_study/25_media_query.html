@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: yellow;
+      }
+
+      /* 미디어 쿼리
+        -> max-, min- 접두사 사용 가능
+           ex. max-width: 1000px이면 1000px 이하에는 모두 적용
+        -> orientation:landscape(가로모드) or orientation:portrait(세로모드)로 조건 적용 가능 */
+
+      @media screen and (max-width: 1000px) {
+        body {
+          background-color: red;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script></script>
+  </body>
+</html>

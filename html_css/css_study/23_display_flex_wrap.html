@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        border: 3px dotted black;
+        width: 400px;
+      }
+
+      .item {
+        background-color: greenyellow;
+        width: 150px;
+        text-align: center;
+        border: 2px solid blue;
+      }
+
+      .container-wrap {
+        display: flex;
+        flex-direction: row;
+        border: 3px dotted black;
+        width: 400px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      기존: container의 width(400px)이 item들의 width(150px*5)보다 작으므로
+      item의 width를 줄여서 넣음
+    </h2>
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+    <br />
+
+    <h2>
+      wrap 적용 시: item의 width를 줄이지 않고 밑으로 내리는 방식으로 넣음
+    </h2>
+    <div class="container-wrap">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+    </div>
+  </body>
+</html>

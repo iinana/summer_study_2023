@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 복합 선택자 */
+      /* (1) 하위 선택자 방식
+         ex. section 하위의 모든 ul을 찾음 */
+      section ul {
+        border: 1px solid black;
+      }
+
+      /* 자식 선택자 방식
+        ex. section 하위의 ul 중 바로 아랫단계의 자식 level만 찾음 */
+      section > ul {
+        text-decoration: underline;
+      }
+
+      /* 인접 형제 선택자 
+        ex. p 다음에 나오는 ul 하나를 찾음 */
+      p + ul {
+        color: blue;
+      }
+
+      /* 일반 형제 선택자
+        ex. p 다음에 나오는 모든 ul을 찾음 */
+      p ~ ul {
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>p태그</p>
+      <ul>
+        <li>
+          li태그
+          <ul>
+            <li>li태그</li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>li태그</li>
+      </ul>
+    </section>
+  </body>
+</html>
